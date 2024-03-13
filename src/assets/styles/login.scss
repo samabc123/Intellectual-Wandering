@@ -1,0 +1,76 @@
+.login-container {
+    background: url('../icons/bgc/OIP-C.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .login-content {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: auto;
+        overflow: hidden;
+        border-radius: 20px 20px 0 0;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 30px;
+        margin-top: -20px;
+    }
+
+    .login-title {
+        letter-spacing: 3px;
+
+        h3 {
+            color: #ffffff;
+        }
+    }
+
+    .login-form {
+        height: auto;
+        overflow: hidden;
+
+        &-item {
+            height: 45px;
+            background: #f1f1f1;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 30px;
+
+            input {
+                height: 30px;
+                width: 100%;
+                padding: 0 .4rem;
+                background: none;
+                color: #999999;
+                font-size: 15px;
+                border: none;
+            }
+        }
+    }
+
+    .login-forget {
+        text-align: right;
+        font-size: 11px;
+        color: #1989fa !important;
+        margin-bottom: 20px;
+    }
+
+    .login-other {
+        margin-top: 50px;
+
+        ul {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+
+            li {
+                margin: 0px 5px;
+            }
+        }
+    }
+
+}
