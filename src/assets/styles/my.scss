@@ -1,0 +1,42 @@
+.profile-container {
+
+    .action-group {
+        margin-top: 10px;
+    }
+
+    .profile-header {
+        width: 375px;
+        height: 220px;
+        background-image: url("../profile2/background.png");
+        background-size: cover;
+
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+        .profile-info {
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            color: #f0f0f0;
+
+            .profile-info-avatar {
+                border: 3px solid #f0f0f0;
+                width: 80px;
+                height: 80px;
+            }
+
+            .profile-info-nickname {
+                font-size: 20px;
+                margin: 7px;
+            }
+
+            .profile-info-address {
+                font-size: 14px;
+                margin: 5px 5px 0px 5px;
+            }
+        }
+    }
+}

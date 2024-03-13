@@ -18,15 +18,15 @@
       <div class="login-forget">
         <span>忘记密码？</span>
       </div>
-      <Button round="true" block type="primary" @click="onLogin">登录</Button>
+      <van-button block type="primary" @click="onLogin" round>登录</van-button>
       <div class="login-other">
         <Divider>其他登陆方式</Divider>
         <ul>
           <li>
-            <Button size="small" @click="Dialog({ message: '点击微信' })">微信</Button>
+            <svg-icon @click="Dialog({ message: '点击微信' })" icon-name="weixin" class-name="icon" />
           </li>
           <li>
-            <Button size="small" @click="Dialog({ message: '点击淘宝' })">淘宝</Button>
+            <svg-icon @click="Dialog({ message: '点击QQ' })" icon-name="QQ" class-name="icon" />
           </li>
         </ul>
       </div>
@@ -36,7 +36,7 @@
 
 <script setup name="Login">
 import { reactive } from "vue";
-import { Button, Divider, Dialog } from "vant";
+import { Divider, Dialog } from "vant";
 import { useUserStore } from "@/stores/user";
 import { useRouter } from "vue-router";
 
@@ -49,8 +49,7 @@ const form = reactive({
 });
 
 function onLogin() {
-
-  userStore.Login(form).then((response) => {
+  userStore.Login(form).then(() => {
     router.push({ path: '/' })
   }).catch((err) => {
     Dialog.alert({ message: err });

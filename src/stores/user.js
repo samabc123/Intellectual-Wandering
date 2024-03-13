@@ -42,7 +42,7 @@ export const useUserStore = defineStore({
         })
       })
     },
-    LogOut: function() {
+    LogOut: function () {
       return new Promise((resolve, reject) => {
         logout().then(() => {
           this.token = null;

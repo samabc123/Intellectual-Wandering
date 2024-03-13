@@ -13,7 +13,7 @@ export default [
         path: '/work',
         component: () => import('@/views/work/index.vue'),
         meta: {
-            title: '工作台',
+            title: '漫游',
             icon: 'apps-o',
             // isNavBar: false
         }
@@ -23,7 +23,7 @@ export default [
         path: '/permission',
         component: () => import('@/views/permission/index.vue'),
         meta: {
-            title: '权限演示',
+            title: '动态',
             icon: 'browsing-history-o',
             // isNavBar: false
         }
