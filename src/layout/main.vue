@@ -34,10 +34,6 @@ const showNavBar = computed(() => (route.meta.isNavBar == undefined ? settingSto
 function TabbarChange(active) {
   router.push({ path: active })
 }
-
-
-
 </script>
 
-<style>
-</style>
+<style></style>

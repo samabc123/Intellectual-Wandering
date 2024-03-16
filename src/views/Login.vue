@@ -16,7 +16,10 @@
         </div>
       </div>
       <div class="login-forget">
-        <span>忘记密码？</span>
+        <span @click="findBack">忘记密码？</span>
+      </div>
+      <div class="login-norooter">
+        <span @click="register">还没有账号?点击注册</span>
       </div>
       <van-button block type="primary" @click="onLogin" round>登录</van-button>
       <div class="login-other">
@@ -35,26 +38,31 @@
 </template>
 
 <script setup name="Login">
-import { reactive } from "vue";
-import { Divider, Dialog } from "vant";
-import { useUserStore } from "@/stores/user";
-import { useRouter } from "vue-router";
+import { reactive } from "vue"
+import { Divider, Dialog } from "vant"
+import { useUserStore } from "@/stores/user"
+import { useRouter } from "vue-router"
 
-const router = useRouter();
-const userStore = useUserStore();
+const router = useRouter()
+const userStore = useUserStore()
 
 const form = reactive({
   username: "",
   password: "",
-});
+})
 
 function onLogin() {
   userStore.Login(form).then(() => {
     router.push({ path: '/' })
   }).catch((err) => {
-    Dialog.alert({ message: err });
+    Dialog.alert({ message: err })
   })
-
+}
+function findBack() {
+  router.push({ path: '/retrievePassword' })
+}
+function register() {
+  router.push({ path: '/register' })
 }
 </script>
 

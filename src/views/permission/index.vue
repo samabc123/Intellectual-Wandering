@@ -1,10 +1,9 @@
-<template></template>
-
-<script setup name="Permission">
-import { useUserStore } from '@/stores/user';
-const userStore = useUserStore();
-
-
+<template>
+    <div>
+    </div>
+</template>
+  
+<script setup name="permission">
 </script>
-
+  
 <style></style>
