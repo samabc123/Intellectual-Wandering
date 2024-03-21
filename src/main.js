@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import { ConfigProvider } from 'vant';
 import { Icon, Button, PullRefresh} from 'vant';
 
 import App from './App.vue'
@@ -16,7 +17,7 @@ import './permission'
 import directive from './directive'
 
 const app = createApp(App)
-
+app.use(ConfigProvider)
 app.use(createPinia())
 app.use(router)
 app.use(Icon)

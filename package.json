@@ -12,12 +12,14 @@
     "axios": "^0.26.1",
     "pinia": "^2.0.13",
     "postcss-pxtorem": "^6.0.0",
+    "three": "^0.160.0",
     "vant": "^3.4.7",
     "vue": "^3.2.31",
     "vue-router": "^4.0.14",
     "vue3-baidu-map-gl": "^2.3.2"
   },
   "devDependencies": {
+    "@types/three": "^0.162.0",
     "@vitejs/plugin-vue": "^2.3.1",
     "sass": "^1.50.0",
     "sass-loader": "^12.6.0",

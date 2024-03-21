@@ -36,4 +36,10 @@ function TabbarChange(active) {
 }
 </script>
 
-<style></style>
+<style scoped>
+.app-header {
+  --van-nav-bar-height: 62px;
+  --van-nav-bar-title-font-size: 20px;
+  
+}
+</style>
