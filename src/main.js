@@ -1,7 +1,8 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { ConfigProvider } from 'vant';
-import { Icon, Button, PullRefresh} from 'vant';
+import { Icon, Button, PullRefresh } from 'vant';
+import { Field, CellGroup, Form } from 'vant';
 
 import App from './App.vue'
 import router from './router'
@@ -12,12 +13,14 @@ import SvgIcon from '@/components/SvgIcon/index.vue'
 import 'amfe-flexible/index.js'
 import './assets/styles/index.scss'
 import './assets/icons/iconfont.js'
-
-import './permission'
-import directive from './directive'
+import axios from 'axios'
 
 const app = createApp(App)
+app.config.globalProperties.$axios = axios
 app.use(ConfigProvider)
+app.use(Field)
+app.use(Form)
+app.use(CellGroup)
 app.use(createPinia())
 app.use(router)
 app.use(Icon)
@@ -27,7 +30,6 @@ app.use(PullRefresh)
 //     ak: '百度地图ak',
 //     plugins: ['TrackAnimation']
 // })
-directive(app)
 
 app.component('svg-icon', SvgIcon)
 

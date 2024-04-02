@@ -1,0 +1,26 @@
+.container {
+    padding: 30px 20px 0 20px;
+    background: #f5f5f5;
+
+    .form-wrap {
+        .form {
+            border-radius: 10px;
+            overflow: hidden;
+
+            .van-cell:first-child {
+                padding-top: 20px;
+            }
+
+            .van-cell:last-child {
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+    .change-btn {
+        text-align: center;
+        margin: 10px 0;
+        color: #597fe7;
+        font-size: 14px;
+    }
+}
