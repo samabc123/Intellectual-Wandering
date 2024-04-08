@@ -11,7 +11,8 @@ const routes = [{
   name: 'login',
   path: '/login',
   component: () => import("@/views/Login.vue")
-}, {
+},
+{
   name: 'retrievePassword',
   path: '/retrievePassword',
   component: () => import('@/views/retrievePassword.vue')
@@ -19,6 +20,9 @@ const routes = [{
   name: 'register',
   path: '/register',
   component: () => import('@/views/register.vue')
+}, {
+  path: '/',
+  redirect: '/login'  // 将默认路由重定向到登录页面
 }]
 
 const router = createRouter({

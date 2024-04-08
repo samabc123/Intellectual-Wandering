@@ -1,0 +1,41 @@
+{
+    "data": [
+      {
+        "feedId": 123,
+        "name": "孙杨",
+        "content": "哈哈哈,又拿了一枚奥运金牌!!!",
+        "url": "/msg/avatar1.jpeg",
+        "picUrl": "/msg/VCG211308717796.webp",
+        "time": "1天前",
+        "like":"赞",
+        "userLike": ["傅园慧", "美国队长", "Tom"],
+        "comment":[{
+          "name":"傅园慧",
+          "content":"杨哥棒棒哒!!!"
+        },
+          {
+            "name":"朴泰桓",
+            "content":"孙杨很厉害思密达"
+          }
+        ]
+      },
+      {
+        "feedId": 1234,
+        "name": "孙杨",
+        "content": "哈哈哈,又拿了一枚奥运金牌!!!",
+        "url": "/msg/avatar2.jpeg",
+        "picUrl": "/msg/VCG211339815469.webp",
+        "time": "1天前",
+        "like":"赞"
+      },
+      {
+        "feedId": 43453,
+        "name": "孙杨",
+        "content": "哈哈哈,又拿了一枚奥运金牌!!!",
+        "url": "/msg/avatar3.jpeg",
+        "picUrl": "/msg/VCG211354717074.webp",
+        "time": "1天前",
+        "like":"赞"
+      }
+    ]
+  }

@@ -11,10 +11,6 @@ import MsgList from "@/components/MsgList/index.vue"
 
 const barData = reactive([
   {
-    title: '今天是你的生日，点击领取礼品！',
-    icon: 'birthday-cake-o'
-  },
-  {
     title: '定位已开启',
     icon: 'guide-o'
   }

@@ -14,6 +14,7 @@ import 'amfe-flexible/index.js'
 import './assets/styles/index.scss'
 import './assets/icons/iconfont.js'
 import axios from 'axios'
+import directive from './directive';
 
 const app = createApp(App)
 app.config.globalProperties.$axios = axios
@@ -23,6 +24,7 @@ app.use(Form)
 app.use(CellGroup)
 app.use(createPinia())
 app.use(router)
+app.use(directive)
 app.use(Icon)
 app.use(Button)
 app.use(PullRefresh)

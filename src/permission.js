@@ -4,8 +4,7 @@ import { useSettingStore } from "./stores/setting"
 import { getToken } from "./utils/auth"
 
 
-const whiteList = ['/login']
-const whiteothers = ['/retrievePassword','/register']
+const whiteothers = ['/retrievePassword', '/register']
 
 router.beforeEach((to, from, next) => {
     const userStore = useUserStore();
@@ -13,24 +12,20 @@ router.beforeEach((to, from, next) => {
 
     if (getToken()) {
         to.meta.title && settingStore.setTitle(to.meta.title);
-        if (to.path === '/login') {
-            next({ path: '/' })
-        } else {
-            if (userStore.userId == null) {
-                // 判断当前用户是否已拉取完user_info信息
-                userStore.GetInfo(getToken()).then(() => {
-                    next({ ...to, replace: true })
-                }).catch(err => {
-                    userStore.LogOut().then(() => {
-                        next({ path: '/' })
-                    })
+        if (userStore.userId == null) {
+            // 判断当前用户是否已拉取完user_info信息
+            userStore.GetInfo(getToken()).then(() => {
+                next({ ...to, replace: true })
+            }).catch(err => {
+                userStore.LogOut().then(() => {
+                    next({ path: '/login' })
                 })
-            } else {
-                next()
-            }
+            })
+        } else {
+            next()
         }
     } else {
-        if (whiteList.indexOf(to.path) !== -1 || whiteothers) {
+        if (whiteothers) {
             // 在免登录白名单，直接进入
             next()
         } else {

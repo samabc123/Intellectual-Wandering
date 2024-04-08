@@ -2,13 +2,13 @@
   <div class="profile-container">
     <div class="profile-header">
       <div class="profile-info">
-        <Image class="profile-info-avatar" round fit="cover" src="../other/avatar.png"></Image>
+        <Image class="profile-info-avatar" round fit="cover" :src="userStore.avatar"></Image>
         <span class="profile-info-nickname">{{ userStore.nickName }}</span>
         <span class="profile-info-address">
           <van-icon name="location-o" /> 太原 中北大学
         </span>
       </div>
-    </div>
+    </div>  
     <Grid :column-num="2" clickable>
       <GridItem icon="paid" text="待付款"></GridItem>
       <GridItem icon="sign" text="待收货"></GridItem>

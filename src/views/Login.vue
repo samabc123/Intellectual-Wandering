@@ -53,7 +53,7 @@ const form = reactive({
 
 function onLogin() {
   userStore.Login(form).then(() => {
-    router.push({ path: '/' })
+    router.push({ path: '/work' })
   }).catch((err) => {
     Dialog.alert({ message: err })
   })
