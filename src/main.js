@@ -14,6 +14,7 @@ import 'amfe-flexible/index.js'
 import './assets/styles/index.scss'
 import './assets/icons/iconfont.js'
 import axios from 'axios'
+import './permission'
 import directive from './directive';
 
 const app = createApp(App)
