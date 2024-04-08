@@ -17,6 +17,7 @@ body {
   .app-body {
     height: calc(100vh - var(--van-nav-bar-height) - var(--van-tabbar-height));
     overflow: auto;
+    background-color: #fff;
   }
 
   .app-body-noNavBar {

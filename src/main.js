@@ -3,6 +3,8 @@ import { createPinia } from 'pinia'
 import { ConfigProvider } from 'vant';
 import { Icon, Button, PullRefresh } from 'vant';
 import { Field, CellGroup, Form } from 'vant';
+import { Grid, GridItem } from 'vant';
+import { Tab, Tabs } from 'vant';
 
 import App from './App.vue'
 import router from './router'
@@ -21,7 +23,11 @@ const app = createApp(App)
 app.config.globalProperties.$axios = axios
 app.use(ConfigProvider)
 app.use(Field)
+app.use(Tab)
+app.use(Tabs)
 app.use(Form)
+app.use(Grid)
+app.use(GridItem)
 app.use(CellGroup)
 app.use(createPinia())
 app.use(router)
