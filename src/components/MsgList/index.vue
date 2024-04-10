@@ -7,7 +7,6 @@
                 @click="onBarClick(item)"></Cell>
             <SwipeCell v-for="(item, index) in msgData" :key="index">
                 <Cell clickable titleStyle="margin: 0.1rem 0rem 0rem 0.5rem;" @click="onMsgClick(item)">
-                    <!-- 使用 right-icon 插槽来自定义右侧图标 -->
                     <template #icon>
                         <Badge :dot="item.dot" :content="item.dot ? null : item.unReadCount" :max="msgMaxCount"
                             :offset="['0rem', '0.2rem']" :show-zero="false">

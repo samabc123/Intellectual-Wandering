@@ -18,11 +18,19 @@ export default defineConfig(({ mode, command }) => {
       }),
       svgBuilder('./src/assets/icons/svg/'),
     ],
-    
+
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url))
       }
-    }
+    },
+    build: {
+      target: 'es2020'
+    },
+    optimizedeps: {
+      esbuildoptions: {
+        target: 'es2020'
+      }
+    },
   }
 })

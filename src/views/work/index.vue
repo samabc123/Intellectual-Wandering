@@ -15,7 +15,7 @@
             </van-grid>
             <div class="middle">
                 <van-tabs :active="active" sticky>
-                    <van-tab v-for="index in 3" :title="'选项 ' + index" :key="index">
+                    <van-tab v-for="index in 3" :title="tit[index-1]" :key="index">
                         内容 {{ index }}
                     </van-tab>
                 </van-tabs>
@@ -31,6 +31,11 @@ import { ref } from 'vue'
 let images = [
     '/msg/VCG211308717796.webp',
     '/msg/VCG211339815469.webp'
+]
+let tit = [
+    '经典推荐',
+    '行程',
+    '结伴行',
 ]
 const active = ref(0);
 
@@ -54,6 +59,7 @@ const active = ref(0);
     border-radius: 26px;
     position: absolute;
     margin-top: 160px;
+    // opacity: 0.9;
 
     .middle {
         width: 100%;

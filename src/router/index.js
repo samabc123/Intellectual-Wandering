@@ -23,6 +23,10 @@ const routes = [{
 }, {
   path: '/',
   redirect: '/login'  // 将默认路由重定向到登录页面
+},{
+  name:'talk',
+  path:'/talk',
+  component:() => import('@/views/msg/talk/index.vue')
 }]
 
 const router = createRouter({

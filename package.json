@@ -10,6 +10,8 @@
   "dependencies": {
     "amfe-flexible": "^2.2.1",
     "axios": "^0.26.1",
+    "less": "^4.2.0",
+    "less-loader": "^12.2.0",
     "pinia": "^2.0.13",
     "postcss-pxtorem": "^6.0.0",
     "three": "^0.160.0",
